@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            FUNCTION EX
+        </title>
+
+        <style>
+            
+        </style>
+
+    </head>
+    <body>
+        <button></button>
+        <button></button>    
+        <button></button>  
+        <button></button>           
+
+        <script>
+            function greet(name = 'there') {
+                console.log(`Hello ${name}`);
+            }
+            greet();
+
+            function convertToFarenheit(Celsius) {
+                //let Fahrenheit = ''
+                return((Fahrenheit = (Celsius * 9/5) + 32));
+
+            }
+            //convertToFarenheit(25);
+
+            function convertToCelsius(Fahrenheit) {
+                //let Celsius = ''
+                return((Celsius = (Fahrenheit - 32) * 5/9));
+
+            }
+            //convertToCelsius(86);
+
+            function convertTemperature(degrees, unit) {
+                if (unit === 'C') {
+                const result = convertToFarenheit(degrees);
+                return `${result}F`;
+                } else if (unit === 'F') {
+                const result = convertToCelsius(degrees);
+                return `${result}C`;
+                }
+            }
+
+            console.log(convertTemperature(25, 'C'));
+            console.log(convertTemperature(86, 'F'));
+        </script>
+    </body>
+    
+</html>
+
+
+
+
+
+
