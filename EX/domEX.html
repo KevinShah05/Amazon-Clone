@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            EX DOM
+        </title>
+
+        <style>
+            
+        </style>
+
+    </head>
+    <body>
+        <button class="js-button">9a</button>
+        <button class="js-button2">9b</button>
+        
+        <button class="js-heads" onclick="document.querySelector('.js-click').innerHTML = 'You chose heads'">heads</button>
+        <button class="js-tails" onclick="document.querySelector('.js-click').innerHTML = 'You chose tails'">tails</button>
+
+        <p class="js-click"></p>
+
+        <input placeholder="Name" class="js-name" onkeydown="
+        key();
+        ">
+        
+        <button onclick="
+        submit();
+        ">Submit</button>
+
+        <script>
+            console.log(document.querySelector('.js-button').innerHTML);
+            console.log(document.querySelector('.js-button2').innerHTML = '9b done!');
+            
+            function submit() {
+            const nameElement = document.querySelector('.js-name');
+            document.querySelector('.js-click').innerHTML = `Your name is: ${nameElement.value}`;
+            }
+
+            function key() {
+                if(event.key === 'Enter') {
+                submit();
+            }
+            }
+            //console.log(document.querySelector('.js-heads').innerHTML = 'You chose: heads');
+            //console.log(document.querySelector('.js-tails').innerHTML = 'You chose: heads');
+
+        </script>
+    </body>
+    
+</html>
+
+
+
+
+
+
